@@ -1,7 +1,6 @@
 import axios from 'axios';
 
-const baseURL = 'http://localhost:5000'; // Your API base URL
-
+const baseURL = 'https://json-dummy-server.onrender.com'; 
 const moviesAPI = {
   addMovie: async (movieData) => {
     try {
@@ -30,7 +29,6 @@ const moviesAPI = {
   fetchMovies: async () => {
     try {
       const response = await axios.get(`${baseURL}/movies`);
-      console.log(response.data);
       return response.data;
     } catch (error) {
       throw new Error(error.response.data.error);
