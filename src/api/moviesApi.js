@@ -11,7 +11,7 @@ const moviesAPI = {
       throw new Error(error.response.data.error);
     }
   },
-  updateMovie: async (id, updatedMovie) => {
+  editMovie: async (id, updatedMovie) => {
     try {
       const response = await axios.put(`${baseURL}/movies/${id}`, updatedMovie);
       return response.data;
@@ -30,6 +30,23 @@ const moviesAPI = {
   fetchMovies: async () => {
     try {
       const response = await axios.get(`${baseURL}/movies`);
+      console.log(response.data);
+      return response.data;
+    } catch (error) {
+      throw new Error(error.response.data.error);
+    }
+  },
+  toggleWatched: async (id, watched) => {
+    try {
+      const response = await axios.patch(`${baseURL}/movies/${id}`, { watched });
+      return response.data;
+    } catch (error) {
+      throw new Error(error.response.data.error);
+    }
+  },
+  addRating: async (id, rating) => {
+    try {
+      const response = await axios.patch(`${baseURL}/movies/${id}`, { rating });
       return response.data;
     } catch (error) {
       throw new Error(error.response.data.error);

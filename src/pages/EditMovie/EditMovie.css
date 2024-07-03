@@ -1,0 +1,55 @@
+.edit-movie-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0; /* Adjust padding as needed */
+  }
+  
+  .edit-ctaForm {
+    text-align: center;
+    color: white;
+    margin-bottom: 20px;
+  }
+  
+  .edit-movie-form {
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+  }
+  
+  .form-group {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+  
+  .form-control {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+  
+  .btn {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn:hover {
+    background-color: #0056b3;
+  }
+  
+  .error-message {
+    color: red;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-align: center; /* Center align error message */
+  }
+  

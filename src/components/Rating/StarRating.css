@@ -1,0 +1,19 @@
+.star-rating {
+    font-size: 24px; /* Adjust font size as needed */
+    color: #ffd700; /* Default color for filled stars */
+    cursor: pointer;
+  }
+  
+  .star-rating .star {
+    display: inline-block;
+    margin-right: 5px; /* Spacing between stars */
+  }
+  
+  .star-rating .star-filled {
+    color: #ffd700; /* Color for filled stars */
+  }
+  
+  .star-rating .star-empty {
+    color: #ccc; /* Color for empty stars */
+  }
+  

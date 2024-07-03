@@ -1,0 +1,193 @@
+.body {
+  padding: 20px;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  font-family: 'Lato', sans-serif; /* Ensure 'Lato' is available */
+}
+
+.heading {
+  text-align: center;
+  font-size: 2.5rem;
+  color: white;
+  margin-bottom: 30px;
+  padding-bottom: 2rem;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  justify-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+  
+  .card {
+    flex: 1 1 288px;
+    max-width: 288px;
+    height: 432px;
+    background: #fff;
+    border: 2px solid #fff;
+    box-shadow: 0px 4px 7px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    transition: all 0.5s cubic-bezier(0.8, 0.5, 0.2, 1.4);
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all 0.5s cubic-bezier(0.8, 0.5, 0.2, 1.4);
+  }
+  
+  .descriptions {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(255, 255, 255, 0.7);
+    width: 100%;
+    height: 100%;
+    transition: all 0.7s ease-in-out;
+    padding: 20px;
+    box-sizing: border-box;
+    clip-path: circle(0% at 100% 100%);
+  }
+  
+  .card:hover .descriptions {
+    left: 0;
+    transition: all 0.7s ease-in-out;
+    clip-path: circle(75%);
+  }
+  
+  .card:hover {
+    transition: all 0.5s cubic-bezier(0.8, 0.5, 0.2, 1.4);
+    box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.3);
+    transform: scale(0.97);
+  }
+  
+  .card:hover img {
+    transition: all 0.5s cubic-bezier(0.8, 0.5, 0.2, 1.4);
+    transform: scale(1.6) rotate(20deg);
+    filter: blur(3px);
+  }
+  
+  .card h1 {
+    color: #ff3838;
+    letter-spacing: 1px;
+    margin: 0;
+  }
+  
+  .card p {
+    line-height: 24px;
+  }
+  
+  .card-buttons {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .card button {
+    width: fit-content;
+    height: 40px;
+    cursor: pointer;
+    border-style: none;
+    padding: 0 10px;
+    font-size: 15px;
+    outline: none;
+    box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.4);
+    transition: all 0.5s ease-in-out;
+  }
+  
+  .watched-button {
+    background-color: #4caf50;
+    color: #fff;
+  }
+  
+  .delete-button {
+    background-color: #ff3838;
+    color: #fff;
+  }
+  
+  .watched-button:hover,
+  .delete-button:hover {
+    transform: scale(0.95) translateX(-5px);
+    transition: all 0.5s ease-in-out;
+  }
+  
+  .modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .modal {
+    background: white;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    width: 300px;
+    text-align: center;
+  }
+  
+  .modal-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+  
+  .confirm-button {
+    background-color: #ff3838;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+  }
+  
+  .cancel-button {
+    background-color: grey;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+  }
+  
+  .confirm-title {
+    color: black;
+  }
+  
+  .confirm-paragraph {
+    color: black;
+  }
+  
+  .movie-title,
+  .movie-description {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+  
+  .movie-title {
+    -webkit-line-clamp: 2;
+    padding-bottom: .25rem;
+    
+  }
+  
+  .movie-description {
+    -webkit-line-clamp: 3;
+    color: black;
+    padding-bottom: .25rem !important;
+  }
+  

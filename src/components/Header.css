@@ -1,0 +1,74 @@
+
+.header {
+    padding: 0.5rem 0;
+    padding-left: 2rem;
+    background: #000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    overflow: hidden; /* Prevents content from extending beyond viewport */
+  }
+  
+  .headerLeft, .headerRight {
+    display: flex;
+    align-items: center;
+  }
+  
+  .headerLeft {
+    flex: 1; /* Takes up remaining space */
+  }
+  
+  .headerRight {
+    display: none; /* Hide initially on mobile */
+  }
+  
+  a > span {
+    margin: 0 15px; /* Adjusted for smaller screens */
+    font-size: 1rem; /* Adjusted font size for smaller screens */
+    cursor: pointer;
+    color: white;
+  }
+  
+  a > span:hover {
+    color: red;
+  }
+  
+  .header__icon {
+    width: 60px; /* Adjusted size for smaller screens */
+    cursor: pointer;
+  }
+  
+  .user__avatar {
+    font-size: 1.5rem; /* Adjusted size for smaller screens */
+  }
+  
+  @media (max-width: 768px) {
+    /* Media query for tablets and smaller screens */
+    .header {
+      margin: 0;
+      padding: 0.5rem;
+    }
+  
+    .headerLeft {
+      flex: 1; /* Takes up remaining space */
+    }
+  
+    .headerRight {
+      display: flex; /* Show on mobile screens */
+      align-items: center;
+    }
+  
+    .headerRight > span {
+      margin: 0 10px; /* Adjusted margin for smaller screens */
+    }
+  
+    .header__icon {
+      width: 50px; /* Further adjusted size for smaller screens */
+    }
+  
+    .user__avatar {
+      font-size: 1.2rem; /* Further adjusted size for smaller screens */
+    }
+  }
+  

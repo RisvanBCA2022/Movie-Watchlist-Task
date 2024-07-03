@@ -1,0 +1,102 @@
+.movie-details-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+  }
+  
+  .movie-details {
+    width: 100%;
+    max-width: 800px; /* Adjust max-width to control width on larger screens */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    margin-top: 30px;
+    padding: 0 20px; /* Add padding to the sides for better spacing */
+  }
+  
+  .movie-details-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+  
+  .movie-detail-title {
+    font-weight: 600;
+    font-size: 2rem; /* Adjust font size for better readability on smaller screens */
+    margin-bottom: 10px;
+    text-align: center;
+  }
+  
+  .edit-button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .edit-button:hover {
+    background-color: #0056b3;
+  }
+  
+  .movie-details-content {
+    display: flex;
+    flex-direction: column; /* Stack content vertically on smaller screens */
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+  .movie-details-poster {
+    width: 100%; /* Make the poster image take full width on smaller screens */
+    max-width: 300px; /* Limit the maximum width of the poster */
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.5) 0px 8px 16px;
+    overflow: hidden;
+  }
+  
+  .movie-poster {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .movie-poster:hover {
+    transform: scale(1.1);
+  }
+  
+  .movie-details-info {
+    width: 100%; /* Take full width of container */
+    padding: 20px 0; /* Add padding for spacing between elements */
+  }
+  
+  .movie-info-item {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    text-align: center; /* Center align text for better readability */
+  }
+  
+  .movie-detail-description {
+    font-size: 1.2rem;
+    text-align: justify;
+    margin-top: 20px;
+    color: white;
+    overflow-wrap: break-word; /* Ensure long descriptions wrap */
+    word-wrap: break-word;
+    hyphens: auto; /* Enable hyphenation for better word wrapping */
+  }
+  
+  .watched-status {
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 1rem;
+    margin-bottom: 10px;
+    text-align: center; /* Center align text for better readability */
+  }
+  
